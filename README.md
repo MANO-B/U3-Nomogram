@@ -3,7 +3,7 @@ MGPT (multi-gene panel testing) advocacy Nomogram for C-CAT CALICO database.
 Copyright (c) 2024 Masachika Ikegami, Released under the [MIT license](https://opensource.org/license/mit).  
 
 ### Trial Website
-[Shinyapps.io](https://1onvji-mano0b.shinyapps.io/felis-cs/)でv0.0.1での動作確認が可能です。  
+[Shinyapps.io](https://1onvji-mano0b.shinyapps.io/MANomogram/)でv0.0.1での動作確認が可能です。  
 1GBメモリの環境のため頻繁にメモリ不足でクラッシュします。基本的には以下に記載の手順のとおりLocal環境で実行ください。  
 
 ### C-CAT CALICO データベースを用いた生殖細胞系列変異の解析Webアプリ
