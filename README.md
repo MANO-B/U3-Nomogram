@@ -37,8 +37,8 @@ docker pull ikegamitky/felis:latest
 
 # バージョンアップが不調の時は、以下の例の様にlatestを変更して直接バージョンを指定するとよいかもしれません。
 # この場合は以降のコマンドにおけるlatestの記載も対応するバージョンに変更して実行します。
-Intel: docker pull ikegamitky/felis:1.6.5
-Apple silicon Mac: docker pull ikegamitky/felis:1.6.5.mac
+Intel: docker pull ikegamitky/felis:1.6.7
+Apple silicon Mac: docker pull ikegamitky/felis:1.6.7.mac
 
 # 古いソフトが動き続けてしまっている場合は以下で終了します。
 docker ps -a
