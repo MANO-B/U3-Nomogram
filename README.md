@@ -223,7 +223,7 @@ Tumor panelで検出された変異に確認検査を行うべきかどうかを
 適切な妥当性検証のデータが入手困難ですが、C-CAT利活用データを用いる見込みです。  
 ただし、生殖細胞系列変異のTumor panelでのVAFの情報が得られません。  
 困りました。他のデータベースで何かあると良いのですが。  
-結果は**Validation**タブ以下に表示します。  
+結果は**Validation**タブ以下に表示します。（実装予定・・・）  
 - ROC曲線での性能評価を**ROC curve**タブに表示します。  
 - 最適な閾値での性能を**Sensitivity-specificity**タブに表示します。  
   
@@ -231,8 +231,7 @@ Tumor panelで検出された変異に確認検査を行うべきかどうかを
 作成した予測モデルを**Prediction**タブ以下で実際のデータに適用可能にします。  
 まずは手元のTumor panelでの検査結果にノモグラムを適用してみます。  
 **Apply nomogram**タブ以下に表示します。  
-- データを**Input your data**タブ中で入力します。
-- 予測結果を**Results**タブで表示します。
+- データを**Analyze your data**タブ中で入力し、ノモグラムでの予測結果を表示します。  
   
 #### 説明
 ソフトの使用法などを**Instruction**タブに表示します。  
@@ -242,4 +241,4 @@ Tumor panelで検出された変異に確認検査を行うべきかどうかを
 
 ### C−CAT CALICOのデータベースのバージョンごとのMANomogram推奨バージョン  
 C-CATのデータはバージョンごとに列名が追加・変更されることがあるため、適合するバージョンが必要です。  
-C-CAT CALICO database version 1 (~20240216): MANomogram version 0.0.1  
+C-CAT CALICO database version 1 (~20240216): MANomogram version 1.6.8  
