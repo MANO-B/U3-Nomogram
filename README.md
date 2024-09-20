@@ -8,9 +8,11 @@ Copyright (c) 2024 Masachika Ikegami, Released under the [MIT license](https://o
 
 ### C-CAT CALICO データベースを用いた生殖細胞系列変異の解析Webアプリ
 国立がん研究センターに設置されている[がんゲノム情報管理センター(C-CAT)](https://www.ncc.go.jp/jp/c_cat/use/index.html)には保険診療で行われたがん遺伝子パネル検査(Comprehensive Genomic Profiling, CGP検査)の結果と臨床情報が集約されています。この情報を学術研究や医薬品等の開発を目的とした二次利活用する仕組みがあります。現状では所属施設の倫理審査とC-CATでの倫理審査を経た研究でのみ使用可能であり、また病院やアカデミア以外の組織では年間780万円の利用料金が必要と敷居が高いですが、類似した海外のデータベースである[AACR project GENIE](https://www.aacr.org/professionals/research/aacr-project-genie/)と比較して薬剤の情報や臨床情報が詳しい点で優れており、希少がん・希少フラクションの研究においてこれまでになかった切り口での解析が可能になると考えられています。  
-  
-C-CATのデータを用いるに当たってはビッグデータかつリアルワールドデータの解析には特有の問題があり、また一定程度のデータ処理を行うプログラミングの知識が必要になります。GUIを用いたソフトウェアにより解析の敷居を下げることで、臨床医の日常診療におけるクリニカルクエスチョンに基づいた探索的研究を容易とし、C-CAT利活用データの活用を促進するために本ソフトウェアを作成しました。Felisはネコの学名であり、C-CAT関連の命名にはネコの名前縛りがあるようです。良い名前を検討中です。  
 
+C-CATのデータを用いるに当たってはビッグデータかつリアルワールドデータの解析には特有の問題があり、また一定程度のデータ処理を行うプログラミングの知識が必要になります。GUIを用いたソフトウェアにより解析の敷居を下げることで、臨床医の日常診療におけるクリニカルクエスチョンに基づいた探索的研究を容易とし、C-CAT利活用データの活用を促進するために本ソフトウェアを作成しました。C-CAT関連の命名にはネコの名前縛りがあるようです。良い名前を検討中です。  
+
+C-CATのデータベースは検査会社でキュレーション後の患者さんに返却されたレポートの情報を公開する利活用検索ポータルと、検査会社でのシーケンスデータ（CRAMファイル）を公開する利活用クラウド C-CAT CALICO (CALculation ＆ Investigation ClOud)の2種類から構成されており、CALICOは公開範囲が極めて制限されているのが現状です。非常にもったいないと思います。  
+  
 C-CAT CALICOからデータを入手可能な方のみが本ソフトウェアを使用可能となる現状はご理解ください。  
 
 ### 解析手法は以下の論文に基づきます
@@ -22,12 +24,13 @@ C-CAT CALICOからデータを入手可能な方のみが本ソフトウェア�
 #### Hardware Requirements
 機械学習を行っており、CPUが高速であるに超したことはありませんが、必ずしも高性能のPCでなくても動作すると思います、多分。  
 
+
 #### Software Requirements
 #### Docker file
 Dockerを使用可能であれば面倒なインストール作業をせずにすぐに使用開始可能です。  
 Dockerの使用法は[Windows向け](https://qiita.com/hoshimado/items/51c99ccaee3d4222d99d)や[MacOS向け](https://www.kagoya.jp/howto/cloud/container/dockerformac/)を参照ください。  
 Docker desktop使用時は、CPUは4コア以上、メモリは[可及的に大きく設定](https://dojo.docker.jp/t/topic/52)ください。  
-MANomogramのDocker fileは[Docker-hub](https://hub.docker.com/r/ikegamitky/)に登録しています。  
+MANomogramのDocker fileは別のC-CATデータ利活用WebアプリであるFELISと統合して[Docker-hub](https://hub.docker.com/r/ikegamitky/)に登録しています。  
 ```
 # 先にDocker desktopを起動しておきます
 # Windowsはコマンドプロンプト、Macはターミナルで以下を実行
@@ -45,7 +48,7 @@ docker ps -a
 docker kill [container id]
 docker rm [container id]
 ```
-使用時は以下のコマンドを入力し、ブラウザで **[http://localhost:3838](http://localhost:3838)** にアクセスするとFELISが起動します。  
+使用時は以下のコマンドを入力し、ブラウザで **[http://localhost:3838](http://localhost:3838)** にアクセスするとMANomogramが起動します。  
 ```
 docker run -d --rm -p 3838:3838 ikegamitky/felis:latest R --no-echo -e 'library(shiny);runApp("/srv/shiny-server/MANomogram", launch.browser=F)'
 
@@ -239,4 +242,4 @@ Tumor panelで検出された変異に確認検査を行うべきかどうかを
 
 ### C−CAT CALICOのデータベースのバージョンごとのMANomogram推奨バージョン  
 C-CATのデータはバージョンごとに列名が追加・変更されることがあるため、適合するバージョンが必要です。  
-C-CAT CALICO database version 1: MANomogram version 0.0.1  
+C-CAT CALICO database version 1 (~20240216): MANomogram version 0.0.1  
