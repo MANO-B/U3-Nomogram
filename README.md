@@ -211,6 +211,7 @@ Analysisタブを開きます。
 #### 体細胞変異から生殖細胞系列変異を予測  
 Tumor panelで検出された変異に確認検査を行うべきかどうかを解析します。  
 結果は**GPV estimation**タブ以下に表示します。  
+解析対象は全遺伝子かsecondary finding genesに限定するかを選択可能です。  
 - 生殖細胞系列変異かどうかを予測するノモグラムを**Nomogram**タブに表示します。  
 - 生殖細胞系列変異かどうか予測する因子を**Odds ratio**タブに表示します。  
 - 生殖細胞系列変異かどうかのノモグラムの性能を[Decision curve analysis](https://mskcc-epi-bio.github.io/decisioncurveanalysis/index.html)で評価し**Decision curve**タブに表示します。
@@ -218,7 +219,7 @@ Tumor panelで検出された変異に確認検査を行うべきかどうかを
 - Nomogramの性能評価を**ROC curve**タブに表示します。  
 - Decision curve analysisの詳細を**Table for decision curve**タブに表示します。  
   
-#### 妥当性検証  
+#### 妥当性検証(未実装)  
 機械学習とノモグラムでそれほど性能に差がないため、理解しやすさと医学的妥当性からノモグラムを使用して外的妥当性をみたいと思います。  
 適切な妥当性検証のデータが入手困難ですが、C-CAT利活用データを用いる見込みです。  
 ただし、生殖細胞系列変異のTumor panelでのVAFの情報が得られません。  
@@ -237,8 +238,9 @@ Tumor panelで検出された変異に確認検査を行うべきかどうかを
 ソフトの使用法などを**Instruction**タブに表示します。  
 　　
 ### 今後の予定
-- 外的妥当性検証について考える。  
+- 外的妥当性検証について考える。
+- 専門家の予測とNomogramの予測の比較  
 
 ### C−CAT CALICOのデータベースのバージョンごとのMANomogram推奨バージョン  
 C-CATのデータはバージョンごとに列名が追加・変更されることがあるため、適合するバージョンが必要です。  
-C-CAT CALICO database version 1 (~20240216): MANomogram version 1.6.8  
+C-CAT CALICO database version 1 (~20240216): MANomogram version 1.6.9  
