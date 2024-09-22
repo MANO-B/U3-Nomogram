@@ -1,6 +1,3 @@
-#####
-DockerでlightGBMがIntel CPUではクラッシュしArm CPUでは動作する状況  
-
 ## MANomogram （仮） for C-CAT CALICO database <img src="source/MANO.png" width=50>
 MGPT (multi-gene panel testing) advocacy Nomogram for C-CAT CALICO database.  
 Copyright (c) 2024 Masachika Ikegami, Released under the [MIT license](https://opensource.org/license/mit).  
@@ -246,4 +243,4 @@ Tumor panelで検出された変異に確認検査を行うべきかどうかを
 
 ### C−CAT CALICOのデータベースのバージョンごとのMANomogram推奨バージョン  
 C-CATのデータはバージョンごとに列名が追加・変更されることがあるため、適合するバージョンが必要です。  
-C-CAT CALICO database version 1 (~20240216): MANomogram version 1.6.9  
+C-CAT CALICO database version 1 (~20240216): MANomogram version 1.7.1  
