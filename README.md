@@ -1,5 +1,3 @@
-##### rms package lrm funcionの動作が不安定
-
 ## MANomogram （仮） for C-CAT CALICO database <img src="source/MANO.png" width=50>
 MGPT (multi-gene panel testing) advocacy Nomogram for C-CAT CALICO database.  
 Copyright (c) 2024 Masachika Ikegami, Released under the [MIT license](https://opensource.org/license/mit).  
