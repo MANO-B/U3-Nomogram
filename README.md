@@ -239,7 +239,9 @@ Tumor panelで検出された変異に確認検査を行うべきかどうかを
 　　
 ### 今後の予定
 - 外的妥当性検証について考える。
-- 専門家の予測とNomogramの予測の比較  
+- 専門家の予測とNomogramの予測の比較
+- Relative VAFとTumor allele ratioの予測性能の比較  
+- On-tumor/Off-tumorを予測因子に導入  
 
 ### C−CAT CALICOのデータベースのバージョンごとのMANomogram推奨バージョン  
 C-CATのデータはバージョンごとに列名が追加・変更されることがあるため、適合するバージョンが必要です。  
