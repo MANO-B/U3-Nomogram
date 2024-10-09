@@ -1,5 +1,5 @@
-## MANomogram （仮） for C-CAT CALICO database <img src="source/MANO.png" width=50>
-MGPT (multi-gene panel testing) advocacy Nomogram for C-CAT CALICO database.  
+## U3-Nomogram for C-CAT CALICO database <img src="source/MANO.png" width=50>
+Germline-foc**U**sed analysis of t**U**mo**U**r-detected variants with **Nomogram** for C-CAT CALICO database.  
 Copyright (c) 2024 Masachika Ikegami, Released under the [MIT license](https://opensource.org/license/mit).  
 
 ### Trial Website
@@ -9,11 +9,11 @@ Copyright (c) 2024 Masachika Ikegami, Released under the [MIT license](https://o
 ### C-CAT CALICO データベースを用いた生殖細胞系列変異の解析Webアプリ
 国立がん研究センターに設置されている[がんゲノム情報管理センター(C-CAT)](https://www.ncc.go.jp/jp/c_cat/use/index.html)には保険診療で行われたがん遺伝子パネル検査(Comprehensive Genomic Profiling, CGP検査)の結果と臨床情報が集約されています。この情報を学術研究や医薬品等の開発を目的とした二次利活用する仕組みがあります。現状では所属施設の倫理審査とC-CATでの倫理審査を経た研究でのみ使用可能であり、また病院やアカデミア以外の組織では年間780万円の利用料金が必要と敷居が高いですが、類似した海外のデータベースである[AACR project GENIE](https://www.aacr.org/professionals/research/aacr-project-genie/)と比較して薬剤の情報や臨床情報が詳しい点で優れており、希少がん・希少フラクションの研究においてこれまでになかった切り口での解析が可能になると考えられています。  
 
-C-CATのデータを用いるに当たってはビッグデータかつリアルワールドデータの解析には特有の問題があり、また一定程度のデータ処理を行うプログラミングの知識が必要になります。GUIを用いたソフトウェアにより解析の敷居を下げることで、臨床医の日常診療におけるクリニカルクエスチョンに基づいた探索的研究を容易とし、C-CAT利活用データの活用を促進するために本ソフトウェアを作成しました。C-CAT関連の命名にはネコの名前縛りがあるようです。良い名前を検討中です。  
+C-CATのデータを用いるに当たってはビッグデータかつリアルワールドデータの解析には特有の問題があり、また一定程度のデータ処理を行うプログラミングの知識が必要になります。GUIを用いたソフトウェアにより解析の敷居を下げることで、臨床医の日常診療におけるクリニカルクエスチョンに基づいた探索的研究を容易とし、C-CAT利活用データの活用を促進するために本ソフトウェアを作成しました。  
 
 C-CATのデータベースは検査会社でキュレーション後の患者さんに返却されたレポートの情報を公開する利活用検索ポータルと、検査会社でのシーケンスデータ（CRAMファイル）を公開する利活用クラウド C-CAT CALICO (CALculation ＆ Investigation ClOud)の2種類から構成されており、CALICOは公開範囲が極めて制限されているのが現状です。非常にもったいないと思います。  
   
-C-CAT CALICOからデータを入手可能な方のみが本ソフトウェアを使用可能となる現状はご理解ください。  
+現状はC-CAT CALICOからデータを入手可能な方のみが本ソフトウェアを使用可能となる現状はご理解ください。論文としての公開後は自由に使用可能にできる見込みです。  
 
 ### 解析手法は以下の論文に基づきます
 > 1) Tamura T et al., Selection bias due to delayed comprehensive genomic profiling in Japan, Cancer Sci, 114(3):1015-1025, 2023.  
@@ -30,7 +30,7 @@ C-CAT CALICOからデータを入手可能な方のみが本ソフトウェア�
 Dockerを使用可能であれば面倒なインストール作業をせずにすぐに使用開始可能です。  
 Dockerの使用法は[Windows向け](https://qiita.com/hoshimado/items/51c99ccaee3d4222d99d)や[MacOS向け](https://www.kagoya.jp/howto/cloud/container/dockerformac/)を参照ください。  
 Docker desktop使用時は、CPUは4コア以上、メモリは[可及的に大きく設定](https://dojo.docker.jp/t/topic/52)ください。  
-MANomogramのDocker fileは別のC-CATデータ利活用WebアプリであるFELISと統合して[Docker-hub](https://hub.docker.com/r/ikegamitky/)に登録しています。  
+U3-NomogramのDocker fileは別のC-CATデータ利活用WebアプリであるFELISと統合して[Docker-hub](https://hub.docker.com/r/ikegamitky/)に登録しています。  
 ```
 # 先にDocker desktopを起動しておきます
 # Windowsはコマンドプロンプト、Macはターミナルで以下を実行
@@ -106,16 +106,16 @@ remotes::install_version(package = "rms", version = "6.7.0", dependencies = FALS
 [Rstudio](https://posit.co/download/rstudio-desktop/)の使用をお勧めします。  
 Figureの日本語表示が上手くいかない場合は[こちら](https://ill-identified.hatenablog.com/entry/2021/09/10/231230)を参照ください。  
   
-### MANomogramの起動
-- MANomogramのダウンロード  
-使用するバージョンのFELISのZIPファイルをダウンロードし、適当なフォルダにダウンロード・解凍してください。
+### U3-Nomogramの起動
+- U3-Nomogramのダウンロード  
+使用するバージョンのU3-NomogramのZIPファイルをダウンロードし、適当なフォルダにダウンロード・解凍してください。
 ```
 wget https://github.com/MANO-B/MANomogram/raw/main/MANomogram_latest.zip
 unzip MANomogram_latest.zip
 ```  
 ここでは"/srv/shiny-server/MANomogram"とします。  
 
-- MANomogramの起動
+- U3-Nomogramの起動
 以下のコマンドでWebアプリが起動します。  
 Rstudioですと画面の右上に表示されるRun Appボタンから起動できます。  
 ```
@@ -219,11 +219,12 @@ Tumor panelで検出された変異に確認検査を行うべきかどうかを
 - Nomogramの性能評価を**ROC curve**タブに表示します。  
 - Decision curve analysisの詳細を**Table for decision curve**タブに表示します。  
   
-#### 妥当性検証(未実装)  
+#### 外的妥当性検証(未実装)  
 機械学習とノモグラムでそれほど性能に差がないため、理解しやすさと医学的妥当性からノモグラムを使用して外的妥当性をみたいと思います。  
-適切な妥当性検証のデータが入手困難ですが、C-CAT利活用データを用いる見込みです。  
+適切な妥当性検証のデータが入手困難ですが、TCGAあるいはC-CAT利活用データを用いる見込みです。  
 ただし、生殖細胞系列変異のTumor panelでのVAFの情報が得られません。  
 困りました。他のデータベースで何かあると良いのですが。  
+FFPE検体と血液検体のペアで解析したデータベースとなるとMSKCCの情報ですが、やはり生殖細胞系列変異のTumor panelでのVAFの情報が得られません。
 結果は**Validation**タブ以下に表示します。（実装予定・・・）  
 - ROC曲線での性能評価を**ROC curve**タブに表示します。  
 - 最適な閾値での性能を**Sensitivity-specificity**タブに表示します。  
@@ -237,12 +238,10 @@ Tumor panelで検出された変異に確認検査を行うべきかどうかを
 #### 説明
 ソフトの使用法などを**Instruction**タブに表示します。  
 　　
-### 今後の予定
-- 外的妥当性検証について考える。
-- 専門家の予測とNomogramの予測の比較
-- Relative VAFとTumor allele ratioの予測性能の比較  
-- On-tumor/Off-tumorを予測因子に導入  
+### 今後の予定  
+- 外的妥当性検証について考える。  
+- 専門家の予測とNomogramの予測の比較  
 
-### C−CAT CALICOのデータベースのバージョンごとのMANomogram推奨バージョン  
+### C−CAT CALICOのデータベースのバージョンごとのU3-Nomogram推奨バージョン  
 C-CATのデータはバージョンごとに列名が追加・変更されることがあるため、適合するバージョンが必要です。  
-C-CAT CALICO database version 1 (~20240216): MANomogram version 1.7.1  
+C-CAT CALICO database version 1 (~20240216): U3-Nomogram version 1.8.1  
