@@ -3,8 +3,7 @@ Germline-foc**U**sed analysis of t**U**mo**U**r-detected variants with **Nomogra
 Copyright (c) 2024 Masachika Ikegami, Released under the [MIT license](https://opensource.org/license/mit).  
 
 ### Trial Germline-origin Prediction Website
-You can check the prediction model of v3.0.1 on this server (http://213.199.63.181/U3Nomogram/).  
-Due to the 12 GB memory with low-spec CPU environment, it frequently crashes due to memory shortages.  
+You can check the prediction model of v3.0.1 on this server (https://www.felis-portal.com/U3Nomogram/).  
 Basically, please execute it in a local environment according to the procedure described below (in Japanese only now). 
 
 ### C-CAT CALICO データベースを用いた生殖細胞系列変異の解析Webアプリ
