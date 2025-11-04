@@ -1,10 +1,9 @@
 ## U3-Nomogram for C-CAT CALICO database <img src="source/MANO.png" width=50>
 Germline-foc**U**sed analysis of t**U**mo**U**r-detected variants with **Nomogram** for C-CAT CALICO database.  
-Copyright (c) 2024 Masachika Ikegami, Released under the [MIT license](https://opensource.org/license/mit).  
+Copyright (c) 2025 Masachika Ikegami, Released under the [MIT license](https://opensource.org/license/mit).  
 
 ### Trial Germline-origin Prediction Website
 You can check the prediction model of v3.0.1 on this server (https://www.felis-portal.com/U3Nomogram/).  
-Basically, please execute it in a local environment according to the procedure described below (in Japanese only now). 
 
 ### Web Application for Germline Variant Analysis Using the C-CAT CALICO Database
 The Center for Cancer Genomics and Advanced Therapeutics (C-CAT) at the National Cancer Center Japan aggregates results from cancer genomic profiling (Comprehensive Genomic Profiling, CGP) tests performed under insurance coverage, along with associated clinical information. A system exists for secondary utilization of this information for academic research and drug development purposes. Currently, access requires ethical review approval from both the affiliated institution and C-CAT. For non-hospital and non-academic organizations, an annual usage fee of 7.8 million yen is required, creating a high barrier to entry. However, compared to similar international databases such as AACR Project GENIE, C-CAT excels in providing detailed drug and clinical information, enabling novel analytical approaches for rare cancers and rare molecular fractions that were previously not feasible.  
