@@ -2,6 +2,12 @@
 Germline-foc**U**sed analysis of t**U**mo**U**r-detected variants with **Nomogram** for C-CAT CALICO database.  
 Copyright (c) 2025 Masachika Ikegami, Released under the [MIT license](https://opensource.org/license/mit).  
 
+## Paper
+> M. Ikegami et al., "MicroSEC filters sequence errors for formalin-fixed and paraffin-embedded samples", Commun Biol 4, 1396 (2021). [https://doi.org/10.1038/s42003-021-02930-4](https://aacrjournals.org/clincancerres/article-abstract/doi/10.1158/1078-0432.CCR-25-2985)
+
+## Press release in Japanese
+> [Press release from National Cancer Center, Japan, 2025/12/18](https://www.ncc.go.jp/jp/information/researchtopics/2025/1218_2/index.html)
+
 ### Trial Germline-origin Prediction Website
 You can check the prediction model of v3.0.1 on this server (https://www.felis-portal.com/U3Nomogram/).  
 
